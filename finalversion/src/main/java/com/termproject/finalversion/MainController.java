@@ -190,7 +190,7 @@ public class MainController {
 				model.addAttribute("name", given_name);
 				model.addAttribute("bio", newbio);
 				model.addAttribute("email", given_email);
-				String imgSrc = "http://" + bucketName + ".s3.amazonaws.com/" + name + ".JPG";
+				String imgSrc = "http://" + bucketName + ".s3.amazonaws.com/" + name + ".jpg";
 				model.addAttribute("imgSrc", imgSrc);
 				userRepository.save(theUser);
 				return new ModelAndView("profile");
@@ -291,7 +291,7 @@ public class MainController {
 					new ObjectMetadata()).withCannedAcl(CannedAccessControlList.PublicRead);
 			client.putObject(put);
 
-			String imgSrc = "http://" + bucketName + ".s3.amazonaws.com/" + name + ".JPG";
+			String imgSrc = "http://" + bucketName + ".s3.amazonaws.com/" + name + ".jpg";
 			User theUser = userRepository.findByName(name);
 			String given_name = theUser.getName();
 			String given_email = theUser.getEmail();
