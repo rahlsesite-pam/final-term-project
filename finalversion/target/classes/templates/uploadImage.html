@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Upload a New Profile Picture</h1>
+<form action="/add4"  method="post" enctype="multipart/form-data">
+    <label for="uname"><b>Enter Your Username to Confirm the Update</b></label>
+    <input type="text" placeholder="Confirm Username" name="name">
+    <input type="file" name="photo" /><br><br>
+    <label for="text">Some Desc</label>
+    <input type="text" name="desc" />
+    <input type="submit" />
+    </form> 
+</body>
+</html>
